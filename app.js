@@ -25,5 +25,19 @@ function drawScore() {
 }
 
 function increaseScore() {
+    let button = 
+    
+    if (button.innerText == 'Home + 1') {
+        game.homeScore += 1
+    }
+    if (button.innerText == 'Home + 3') {
+        game.homeScore += 3
+    }
 
+    if (button.innerText == 'Away + 1') {
+        game.awayScore += 1
+    }
+    if (button.innerText == 'Away + 3') {
+        game.awayScore += 3
+    }
 }
