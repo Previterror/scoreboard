@@ -15,6 +15,7 @@ function resetScore() {
     console.log('home', game.homeScore)
     console.log('away', game.awayScore)
     drawScore()
+    showInputs()
 }
 
 function drawScore() {
@@ -31,11 +32,22 @@ function changeScore(team, points) {
     if (team == 'away') {
         game.awayScore += points
     }
+    checkScore()
     drawScore()
-    checkWinner()
 }
 
-function checkWinner() {
+function checkScore() {
+
+    if (game.awayScore < 0) {
+        game.awayScore = 0
+    }
+
+    if (game.homeScore < 0) {
+        game.homeScore = 0
+    }
+
+
+
     if (game.homeScore >= 15) {
         hideInputs()
         window.alert('The Home Team has won! YAY!')
@@ -49,4 +61,9 @@ function checkWinner() {
 function hideInputs() {
     let inputSection = document.getElementById('input-section')
     inputSection.classList.add('d-none')
+}
+
+function showInputs() {
+    let inputSection = document.getElementById('input-section')
+    inputSection.classList.remove('d-none')
 }
