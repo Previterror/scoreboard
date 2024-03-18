@@ -7,7 +7,7 @@ const game =
 let home = document.getElementById('homeTeam')
 let away = document.getElementById('awayTeam')
 
-// drawScore()
+drawScore()
 
 function resetScore() {
     game.homeScore = 0
@@ -24,20 +24,22 @@ function drawScore() {
     away.innerText = game.awayScore.toString()
 }
 
-function increaseScore() {
-    let button = 
-    
-    if (button.innerText == 'Home + 1') {
-        game.homeScore += 1
+function increaseScore(team, points) {
+    if (team == 'home') {
+        game.homeScore += points
     }
-    if (button.innerText == 'Home + 3') {
-        game.homeScore += 3
+    if (team == 'away') {
+        game.awayScore += points
     }
+    drawScore()
+}
 
-    if (button.innerText == 'Away + 1') {
-        game.awayScore += 1
+function decreaseScore(team, points) {
+    if (team == 'home') {
+        game.homeScore += points
     }
-    if (button.innerText == 'Away + 3') {
-        game.awayScore += 3
+    if (team == 'away') {
+        game.awayScore += points
     }
+    drawScore()
 }
