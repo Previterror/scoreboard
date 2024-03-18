@@ -24,7 +24,7 @@ function drawScore() {
     away.innerText = game.awayScore.toString()
 }
 
-function increaseScore(team, points) {
+function changeScore(team, points) {
     if (team == 'home') {
         game.homeScore += points
     }
@@ -32,14 +32,21 @@ function increaseScore(team, points) {
         game.awayScore += points
     }
     drawScore()
+    checkWinner()
 }
 
-function decreaseScore(team, points) {
-    if (team == 'home') {
-        game.homeScore += points
+function checkWinner() {
+    if (game.homeScore >= 15) {
+        hideInputs()
+        window.alert('The Home Team has won! YAY!')
     }
-    if (team == 'away') {
-        game.awayScore += points
+    if (game.awayScore >= 15) {
+        hideInputs()
+        window.alert('The Away Team has won. BOO!')
     }
-    drawScore()
+}
+
+function hideInputs() {
+    let inputSection = document.getElementById('input-section')
+    inputSection.classList.add('d-none')
 }

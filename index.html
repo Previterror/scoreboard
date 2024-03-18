@@ -36,21 +36,21 @@
         </section>
 
         <!-- !SECTION - Input Buttons -->
-        <section class="row justify-content-around text-center p-3 mt-3 mb-3">
+        <section id="input-section" class="row justify-content-around text-center p-3 mt-3 mb-3">
             <div class="col-4">
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('home', 1)">Home
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('home', 1)">Home
                     +1</button>
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('home', 3)">Home
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('home', 3)">Home
                     +3</button>
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('home', -1)">Home
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('home', -1)">Home
                     -1</button>
             </div>
             <div class="col-4">
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('away', 1)">Away
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('away', 1)">Away
                     +1</button>
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('away', 3)">Away
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('away', 3)">Away
                     +3</button>
-                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="increaseScore('away', -1)">Home
+                <button class="btn btn-primary col-7 m-2 fs-3 input-button" onclick="changeScore('away', -1)">Away
                     -1</button>
             </div>
         </section>
